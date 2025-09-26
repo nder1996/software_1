@@ -1,0 +1,133 @@
+.marco-table-user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin: 1rem;
+    color: #035159;
+  }
+}
+
+.user-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px 0;
+
+  th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+  }
+
+  th {
+    background: #035159;
+    color: #3DD980;
+  }
+
+  tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+}
+
+.avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Paginación Bootstrap */
+.pagination {
+  display: flex;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: -1px;
+}
+
+.page-item.active .page-link {
+  color: #3DD980;
+  background: #035159;;
+  border-color: #035159;;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background: #fff;
+  border-color: #dee2e6;
+}
+
+.page-link {
+  display: block;
+  color: #035159;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  padding: 0.375rem 0.75rem;
+  margin-left: -1px;
+  cursor: pointer;
+  transition: all 0.15s;
+
+  &:hover {
+    color: #0a58ca;
+    background: #e9ecef;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+}
+
+.page-item:first-child .page-link {
+  border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 300px;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.close-btn {
+  border: 1px solid green !important;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter-div {
+  width: 88%;
+  text-align: center;
+
+  input {
+    width: 100%;
+  }
+}

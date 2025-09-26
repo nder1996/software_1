@@ -1,0 +1,15 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = nav-bar__btn-list-user, nav-bar__btn-create-user, nav-bar__btn-logout
+-->
+<nav class="navbar card" [class.responsive]="isResponsive">
+  <div class="navbar-content">
+    <img src="./assets/images/logo/logo.png" alt="Logo">
+    <div class="nav-links">
+      <a id="nav-bar__btn-create-user" (click)="crear()">Crear Usuario</a>
+      <a id="nav-bar__btn-list-user" (click)='listar()'>Listar Usuario</a>
+      <a id="nav-bar__btn-logout" (click)="logout()">Salir</a>
+    </div>
+  </div>
+  <a href="javascript:void(0);" class="icon" (click)="toggleNavbar()">&#9776;</a>
+</nav>

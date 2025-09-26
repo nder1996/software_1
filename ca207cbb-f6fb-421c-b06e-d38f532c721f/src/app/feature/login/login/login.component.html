@@ -1,0 +1,32 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = login__email, login__password, login__password-error, login__email-error, login__btn-login
+-->
+<div class="container">
+  <form [formGroup]="formLogin" class="card" (ngSubmit)="ingresar()">
+    <div class="text-login">
+      <img class="img-login" src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" alt="">
+      <h1 class="text-center"><strong>Login</strong></h1>
+      <small class="text-center mt-2">Welcome to my technical test: User Manager</small>
+    </div>
+    <br>
+    <div class="div-email mt-2">
+      <label class="mt-5" for="email">Email</label>
+      <input id="login__email" type="text" formControlName="email">
+      <div id="login__email-error" *ngIf="formLogin.get('email').invalid && formLogin.get('email').touched">
+        <small *ngIf="formLogin.get('email').errors.required">Email is required</small>
+        <small *ngIf="formLogin.get('email').errors.email">The email is not valid</small>
+      </div>
+    </div>
+
+    <div class="div-password mb-5">
+      <label class="mt-5" for="password">Password</label>
+      <input id="login__password" type="password" formControlName="password">
+      <div id="login__password-error" *ngIf="formLogin.get('password').invalid && formLogin.get('password').touched">
+        <small *ngIf="formLogin.get('password').errors.required">Password is required</small>
+        <small *ngIf="formLogin.get('password').errors.minlength">The minimum of characters will be 8</small>
+      </div>
+    </div>
+    <button id="login__btn-login" class="mt-5 btn-login" type="submit">Login</button>
+  </form>
+</div> 

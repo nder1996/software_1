@@ -1,0 +1,76 @@
+.container-fluid {
+    height: 90vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.form-create-user {
+    border: 1px solid whitesmoke;
+    padding: 1rem !important;
+    width: 500px !important;
+
+    .row {
+        .col-12 {
+            margin: 1.5rem !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            gap: 1rem !important;
+        }
+    }
+
+    h1 {
+        margin: 0 !important;
+    }
+
+
+
+    #user-create__btn-create {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 5px;
+    }
+}
+
+input {
+    width: 94% !important;
+}
+
+label {
+    width: 100%;
+    text-align: left;
+}
+
+small {
+    text-align: left;
+    width: 100%;
+    color: red;
+}
+
+.text-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  
+    h1 {
+      color: #035159 !important;
+  
+      span {
+        color: #035159  !important; 
+      }
+    }
+  }
+
+@media (max-width: 768px) {
+    .form-create-user {
+        padding: 0.5rem;
+        width: 90%;
+    }
+}
